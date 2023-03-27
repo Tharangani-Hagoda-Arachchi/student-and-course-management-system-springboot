@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Add Student</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  background-color: teal;
+}
+h1 {
+  font-size: 60px;
+  margin-top: 10px;
+  padding: 0px;
+}
+
+
+div.wrap {
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+}
+
+div.wrap div {
+  position: relative;
+  margin: 20px 0;
+}
+
+
+
+.active {
+  top: -25px;
+  font-size: 20px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid white;
+  font-size: 20px;
+  background-color: teal;
+  color: white;
+  
+ 
+} 
+input[type=number] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid white;
+  font-size: 20px;
+  background-color: teal;
+  color: white;
+  
+ 
+} 
+
+input[type=email] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid white;
+  font-size: 20px;
+  background-color: teal;
+  color: white;
+  
+ 
+} 
+
+#save {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid green;
+  font-size: 30px;
+  background-color: green;
+  color: white;
+ 
+  
+  
+ 
+} 
+
+
+::placeholder{
+    color: gray;
+    font-size: 20px;
+}
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+
+<div class="wrap">
+  <h2>ADD AND UPDATE STUDENT</h2>
+ <form action="#" th:action="@{/Student/save}" th:object="${student}" method="POST">
+  <div>
+      
+      <input placeholder="Enter Student ID"   type="text" class="cool" th:field="*{id}" />
+  </div>
+
+  <div>
+   
+    <input placeholder="Enter Student NIC"  type="text" class="cool" th:field="*{nic}"/>
+  </div>
+  
+  <div>
+    
+    <input placeholder="Enter Student Name" type="text" class="cool" th:field="*{name}"/>
+  </div>
+  
+  <div>
+    
+    <input placeholder="Enter Student Address"  type="text" class="cool" th:field="*{address}"/>
+  </div>
+  
+  <div>
+    
+    <input placeholder="Enter Student Email"  type="email" class="cool" th:field="*{email}"/>
+    
+  </div>
+     <div>
+    
+    <input placeholder="Enter Student Phone No"  type="number" class="cool" th:field="*{phone}"/>
+    
+  </div>
+  
+     <div>
+    
+    <input placeholder="Enter Student Fee"  type="number" class="cool" th:field="*{fee}"/>
+    
+  </div>
+     <div>
+    
+    <input placeholder="Enter Course"  type="text" class="cool" th:field="*{course}"/>
+    
+  </div>
+  <div>
+      
+    <input  value="save" id="save" name="save" type="submit" class="cool"/>
+      
+  </div>
+     <input type="button"  onclick="location.href='/student'"  style=" margin-left: 8px;width: 100px; height:25px; background-color: blue; color: white;" value="Reset"/>
+</form>
+  
+</div>
+
+
+    </body>
+</html>
+
